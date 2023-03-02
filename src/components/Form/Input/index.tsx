@@ -1,10 +1,11 @@
+import { iInputProps } from '../../../contexts/userContext/@types';
 import { StyledTextField } from '../../../styles/form';
 import { StyledParagraph } from '../../../styles/typography';
 
-const Input = () => (
+const Input = ({ label, errors, register, type }: iInputProps) => (
   <fieldset>
-    <StyledTextField label='Teste' type='text' />
-    <StyledParagraph fontColor='red'>Erro</StyledParagraph>
+    <StyledTextField type={type} label={label} {...register} />
+    {errors && <StyledParagraph fontColor='red'>{errors}</StyledParagraph>}
   </fieldset>
 );
 

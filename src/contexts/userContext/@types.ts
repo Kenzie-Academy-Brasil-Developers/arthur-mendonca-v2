@@ -8,7 +8,7 @@ import {
 export interface iInputProps {
   label: string;
   register: UseFormRegisterReturn<string>;
-  errors?: FieldError | null;
+  errors?: FieldError | null | string;
   type: 'text' | 'email' | 'password';
   name: string;
   email: string;

@@ -32,6 +32,7 @@ const RegisterForm = () => {
         register={register('name')}
         errors={errors.name?.message}
       />
+      {errors && <StyledParagraph fontColor='red'>{errors}</StyledParagraph>}
       <Input
         type='email'
         label='Seu e-mail'
